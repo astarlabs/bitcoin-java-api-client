@@ -1,5 +1,5 @@
 /*
- * Bitcoin API
+ *  API
  * Blockchain Facilities
  *
  * OpenAPI spec version: 2.0.0
@@ -30,7 +30,7 @@ public class SendApiTest {
 
     
     /**
-     * Send file hash to bitcoin blockchain
+     * Send file hash to  blockchain
      *
      * Send an OP_RETURN transaction with a base64 encoded file and return the API id for the blockchain transaction. 
      *
@@ -48,7 +48,8 @@ public class SendApiTest {
         String base64 = null;
         BlockchainNetwork blockchainNetwork = null;
         Integer test = 1;
-        SingleResult response = api.sendFile(token, account, user, password, base64, blockchainNetwork, test);
+        Boolean force = null;
+        SingleResult response = api.sendFile(token, account, user, password, base64, blockchainNetwork, test, force);
 
         // TODO: test validations
     }
@@ -77,7 +78,7 @@ public class SendApiTest {
     }
     
     /**
-     * Send string to bitcoin blockchain
+     * Send string to  blockchain
      *
      * Send an OP_RETURN transaction with a string and return the API id for the blockchain transaction. 
      *
@@ -94,7 +95,8 @@ public class SendApiTest {
         String string = null;
         BlockchainNetwork blockchainNetwork = null;
         Integer test = null;
-        SingleResult response = api.sendString(token, account, user, password, string, blockchainNetwork, test);
+        Boolean force = null;
+        SingleResult response = api.sendString(token, account, user, password, string, blockchainNetwork, test, force);
 
         // TODO: test validations
     }
@@ -105,7 +107,7 @@ public class SendApiTest {
     	
     	Blockchain blockchain = new Blockchain("", 0, "", "");
     	
-     	String reg = blockchain.registrarDocumento("registrodeText1231".getBytes(), BlockchainNetwork.ETHEREUM_CLASSIC, 0);
+     	String reg = blockchain.registrarDocumento("registrodeText1231".getBytes(), BlockchainNetwork.ETHEREUM, 0, null);
     	System.out.println(reg);
     	
     	
