@@ -111,13 +111,6 @@
 		</developer>
 	</developers>
 
-	<distributionManagement>
-		<repository>
-			<id>myMavenRepo.write</id>
-			<url>https://mymavenrepo.com/repo/pMfxLKkrHNX8QfyC24xw/</url>
-		</repository>
-	</distributionManagement>
-
 	<build>
 		<plugins>
 			<plugin>
